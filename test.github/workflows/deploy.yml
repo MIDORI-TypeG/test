@@ -1,0 +1,32 @@
+# Workflowの名前
+name: Deploy to Server
+
+# 実行のきっかけ (mainブランチにpushされた時)
+on:
+  push:
+    branches: [ main ]
+
+# 実行する処理内容
+jobs:
+  deploy:
+    # 実行環境 (最新のUbuntu)
+    runs-on: ubuntu-latest
+    steps:
+    # 1. リポジトリのソースコードをチェックアウト
+    - uses: actions/checkout@v3
+
+    # 2. FTPを使ってサーバーにデプロイ
+    - name: FTP Deploy
+      # SamKirkland/FTP-deploy-actionという便利なアクションを利用
+      uses: SamKirkland/FTP-deploy-action@4.3.3
+      with:
+        # サーバーアドレス (Secretsから取得)
+        server: ${{ secrets.FTP_SERVER }}
+        # ユーザー名 (Secretsから取得)
+        username: ${{ secrets.FTP_USERNAME }}
+        # パスワード (Secretsから取得)
+        password: ${{ secrets.FTP_PASSWORD }}
+        # アップロードするローカルのディレクトリ (ルートディレクトリ全体)
+        local-dir: ./
+        # サーバー側のアップロード先ディレクトリ (ドキュメントルート)
+        server-dir: /
