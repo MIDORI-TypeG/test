@@ -3,146 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IT関連変更</title>
+<title>IT技術のまとめ</title>
 <style>
-body {
-font-family: Arial, sans-serif;
-line-height: 1.6;
-margin: 20px;
-background-color: #f4f4f4;
-}
-h1, h2 {
-color: #333;
-}
-header {
-text-align: center;
-margin-bottom: 30px;
-}
-section {
-margin-bottom: 20px;
-padding: 15px;
-background-color: #fff;
-border-radius: 8px;
-box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-img {
-max-width: 300px;
-height: auto;
-border-radius: 8px;
-margin-top: 10px;
-display: block;
-cursor: pointer;
-transition: transform 0.2s;
-}
-img:hover {
-transform: scale(1.05);
-}
-a {
-color: #007bff;
-text-decoration: none;
-}
-a:hover {
-text-decoration: underline;
-}
-footer {
-text-align: center;
-margin-top: 40px;
-padding: 10px;
-background-color: #333;
-color: #fff;
-}
+    /* 既存のスタイルは省略 */
+    body {
+        font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+        line-height: 1.8;
+        margin: 0;
+        background-color: #f8f9fa;
+        color: #343a40;
+    }
+    header {
+        background: linear-gradient(45deg, #007bff, #6610f2);
+        color: white;
+        text-align: center;
+        padding: 4rem 1rem;
+        margin-bottom: 40px;
+    }
+    header h1 {
+        font-size: 3rem;
+        margin: 0;
+        font-weight: 700;
+        animation: fadeInDown 1s;
+    }
+    header p {
+        font-size: 1.2rem;
+        animation: fadeInUp 1s;
+    }
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    section {
+        background-color: #fff;
+        margin-bottom: 30px;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+    h2 {
+        color: #007bff;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-top: 0;
+    }
+    a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 15px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+    img:hover {
+        transform: scale(1.03);
+    }
+    .extra-info {
+        background-color: #e9ecef;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 15px;
+        font-size: 0.95rem;
+        border-left: 5px solid #007bff;
+    }
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #343a40;
+        color: #fff;
+    }
 
-/* Mobile responsive styles */
-@media (max-width: 768px) {
-body {
-margin: 10px;
-font-size: 14px;
-}
-header {
-margin-bottom: 20px;
-}
-h1 {
-font-size: 24px;
-}
-h2 {
-font-size: 18px;
-}
-section {
-padding: 10px;
-margin-bottom: 15px;
-}
-img {
-max-width: 200px;
-}
-footer {
-margin-top: 30px;
-padding: 8px;
-}
-}
+    /* アニメーション */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
 
-/* iPhone specific styles */
-@media (max-width: 480px) {
-body {
-margin: 5px;
-font-size: 13px;
--webkit-text-size-adjust: 100%;
-}
-header {
-margin-bottom: 15px;
-}
-h1 {
-font-size: 20px;
-}
-h2 {
-font-size: 16px;
-}
-section {
-padding: 8px;
-margin-bottom: 10px;
-}
-img {
-max-width: 150px;
-height: auto;
-object-fit: contain;
--webkit-user-select: none;
--webkit-touch-callout: none;
-}
-footer {
-margin-top: 20px;
-padding: 6px;
-font-size: 12px;
-}
-}
+    /* レスポンシブ対応 */
+    @media (max-width: 768px) {
+        header { padding: 3rem 1rem; }
+        header h1 { font-size: 2.5rem; }
+        header p { font-size: 1rem; }
+    }
 </style>
 </head>
 <body>
 <header>
-<h1>IT関連まとめ（update）による変更を受けつけました。</h1>
-<p>プログラミング言語、生成系AI、ITの歴史についてのページへのリンク集です。</p>
+    <h1>IT技術の世界へようこそ</h1>
+    <p>このページでは、現代社会を支えるIT技術の基礎であるプログラミング言語、話題の生成AI、そしてITがどのように発展してきたかの歴史を学ぶことができます。</p>
 </header>
 
 <main>
-<section>
-<h2><a href="programming_languages.html">プログラミング言語について</a></h2>
-<p>プログラミング言語の概要、歴史、種類、特徴、用途をまとめたページです。プログラミング言語は、コンピュータに指示を与えるための形式的な言語です。</p>
-<a href="programming_languages.html"><img src="./Generated Image August 27, 2025 - 4_06PM.jpeg" alt="プログラミング言語画像"></a>
-</section>
+    <section class="fade-in">
+        <h2><a href="programming_languages.html">プログラミング言語について</a></h2>
+        <p>Webサイト、スマートフォンアプリ、ゲームなど、私たちの身の回りにある様々なものはプログラミング言語によって作られています。ここではその基本から種類、そして何に使われているのかを解説します。</p>
+        <div class="extra-info">
+            <p><strong>豆知識：</strong> 最も人気のある言語の一つにPythonがあります。AI開発やデータ分析で広く使われ、文法がシンプルなため初心者にも学びやすいと言われています。例えば、画面に「Hello, World!」と表示するコードはたった1行です。</p>
+            <code>print("Hello, World!")</code>
+        </div>
+        <a href="programming_languages.html"><img src="./Generated Image August 27, 2025 - 4_06PM.jpeg" alt="プログラミング言語画像"></a>
+    </section>
 
-<section>
-<h2><a href="generative_ai.html">生成系AIについて</a></h2>
-<p>生成系AIの概要、歴史、種類、応用、利点と課題をまとめたページです。生成系AIは、既存のデータを学習し、新しいコンテンツを生成する人工知能の一種です。</p>
-<a href="generative_ai.html"><img src="./Generated Image August 27, 2025 - 4_06PM-2.jpeg" alt="生成系AI画像"></a>
-</section>
+    <section class="fade-in">
+        <h2><a href="generative_ai.html">生成系AIについて</a></h2>
+        <p>文章や画像の作成、音楽の作曲まで、クリエイティブな作業を自動化する生成AI。その仕組みや種類、そして私たちの未来にどのような影響を与えるのかを探ります。</p>
+        <div class="extra-info">
+            <p><strong>具体例：</strong> OpenAIが開発した「ChatGPT」は、人間のように自然な対話ができ、文章の要約や翻訳、アイデア出しなどを手伝ってくれます。また、「DALL-E 2」や「Midjourney」といった画像生成AIは、入力したテキストから高品質な画像を生成することができます。</p>
+        </div>
+        <a href="generative_ai.html"><img src="./Generated Image August 27, 2025 - 4_06PM-2.jpeg" alt="生成系AI画像"></a>
+    </section>
 
-<section>
-<h2><a href="it_history.html">ITの歴史まとめ</a></h2>
-<p>情報技術（IT）の歴史は、電子計算機の発明から始まり、現代のデジタル社会へと発展してきました。主要な出来事を時系列でまとめます。</p>
-<a href="it_history.html"><img src="./Generated Image August 27, 2025 - 4_06PM-3.jpeg" alt="ITの歴史画像"></a>
-</section>
+    <section class="fade-in">
+        <h2><a href="it_history.html">ITの歴史まとめ</a></h2>
+        <p>巨大な計算機から手のひらサイズのスマートフォンまで、ITは驚くべき速さで進化してきました。その発展の歴史を、主要な出来事とともに時系列で振り返ります。</p>
+        <div class="extra-info">
+            <p><strong>キーポイント：</strong> ITの進化を語る上で欠かせないのが「ムーアの法則」です。これは「半導体の集積密度は18〜24ヶ月で2倍になる」という経験則で、コンピュータの性能が指数関数的に向上してきた背景にあります。この法則のおかげで、今日の高性能なデバイスが実現しています。</p>
+        </div>
+        <a href="it_history.html"><img src="./Generated Image August 27, 2025 - 4_06PM-3.jpeg" alt="ITの歴史画像"></a>
+    </section>
 </main>
 
 <footer>
-<p>&copy; 2023 IT関連まとめページ</p>
+    <p>&copy; 2025 IT技術のまとめ</p>
 </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeInElements.forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+
 </body>
 </html>
